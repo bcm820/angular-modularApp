@@ -1,5 +1,4 @@
-
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-main',
@@ -9,15 +8,10 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class MainComponent implements OnInit {
 
   @Input() paragraphs; // input takes in exposed vars from the parent
-  @Output() event = new EventEmitter(); // output exposes vars to the parent
   
   constructor() { }
 
   ngOnInit() {
-  }
-
-  callParent() {
-    this.event.emit();
   }
 
 }

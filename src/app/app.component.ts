@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+
+  pars = [
+    'paragraph1',
+    'paragraph2',
+    'paragraph3'
+  ]
+
+  listenToChild(){
+    console.log('success');
+  }
+
 }
