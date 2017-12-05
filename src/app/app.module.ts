@@ -1,5 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+
 import { AppComponent } from './app.component';
 
 import { LayoutComponent } from './layout/layout.component';
@@ -8,6 +11,7 @@ import { LayoutComponent } from './layout/layout.component';
   import { MainComponent } from './layout/main/main.component';
 
 import { PowerLevelsComponent } from './power-levels/power-levels.component';
+import { LevelsComponent } from './power-levels/levels/levels.component';
 
 
 @NgModule({
@@ -17,10 +21,13 @@ import { PowerLevelsComponent } from './power-levels/power-levels.component';
     NavComponent,
     MainComponent,
     PowerLevelsComponent,
-    LayoutComponent
+    LayoutComponent,
+    LevelsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+		HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]

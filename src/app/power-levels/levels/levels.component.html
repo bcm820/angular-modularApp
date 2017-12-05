@@ -1,0 +1,8 @@
+
+<h2>{{level}}</h2>
+
+<span [ngSwitch]="true">
+<p *ngSwitchCase="level > 9000 && level <= 20000">"Over 9,000!"</p>
+<p *ngSwitchCase="level > 20000 && level < 50000 ">"Superlative!"</p>
+<p *ngSwitchCase="level === 50000">"The One"</p>
+</span>
