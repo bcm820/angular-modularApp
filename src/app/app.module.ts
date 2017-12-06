@@ -12,6 +12,8 @@ import { LayoutComponent } from './layout/layout.component';
 
 import { PowerLevelsComponent } from './power-levels/power-levels.component';
 import { LevelsComponent } from './power-levels/levels/levels.component';
+import { QuoteRanksComponent } from './quote-ranks/quote-ranks.component';
+import { QuotesComponent } from './quote-ranks/quotes/quotes.component';
 
 
 @NgModule({
@@ -22,7 +24,9 @@ import { LevelsComponent } from './power-levels/levels/levels.component';
     MainComponent,
     PowerLevelsComponent,
     LayoutComponent,
-    LevelsComponent
+    LevelsComponent,
+    QuoteRanksComponent,
+    QuotesComponent
   ],
   imports: [
     BrowserModule,

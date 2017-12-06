@@ -1,30 +1,26 @@
 
-<div class=container>
-  <div class=row>
-    <div class="form-group col-sm-12">
-
-      <h3>Power Levels</h3>
-      <form class=form-inline #setter="ngForm" (submit)="calculate()">
-      <label class=control-label>Initial power level: &nbsp;</label>
-      <input class=form-control style="width:100px" required
-        type=number min=1 max=100 name=lvl value={{control.lvl}}
-        [(ngModel)]='control.lvl' #lvl='ngModel'>
-      <input *ngIf="!setter.valid || lvl.value > 100 || lvl.value === 0" value="Enter Power Level" type=submit class="btn btn-danger disabled" [disabled]="!setter.valid">
-      <input *ngIf="setter.valid && lvl.value <= 100 && lvl.value > 0" value="Calculate Powers" type=submit class="btn btn-primary">
-      </form>
-
-    </div>
+<div class=row>
+  <div class="form-group col-sm-12">
+    <h3>Power Levels</h3>
+    <form class=form-inline #setter="ngForm" (submit)="calculate()">
+    <label class=control-label>Initial power level: &nbsp;</label>
+    <input class=form-control style="width:100px" required
+      type=number min=1 max=100 name=lvl value={{control.lvl}}
+      [(ngModel)]='control.lvl' #lvl='ngModel'>
+    <input *ngIf="!setter.valid || lvl.value > 100 || lvl.value === 0" value="Enter Power Level" type=submit class="btnbtn-danger disabled" [disabled]="!setter.valid">
+    <input *ngIf="setter.valid && lvl.value <= 100 && lvl.value > 0" value="Calculate Powers" type=submit class="btnbtn-primary">
+    </form>
   </div>
+</div>
 
-  <div class=row><hr>
-    <div class="col-sm-4 well text-center"><strong>Human</strong><app-levels [level]='human'></app-levels></div>
-    <div class="col-sm-4 well text-center"><strong>Saiyan</strong><app-levels [level]='saiyan'></app-levels></div>
-    <div class="col-sm-4 well text-center"><strong>SuperSaiyan</strong><app-levels [level]='super1'></app-levels></div>
-  </div>
+<div class=row><hr>
+  <div class="col-sm-4 well text-center"><strong>Human</strong><app-levels [level]='human'></app-levels></div>
+  <div class="col-sm-4 well text-center"><strong>Saiyan</strong><app-levels [level]='saiyan'></app-levels></div>
+  <div class="col-sm-4 well text-center"><strong>SuperSaiyan</strong><app-levels [level]='super1'></app-levels></div>
+</div>
 
-  <div class=row>
-    <div class="col-sm-4 well text-center"><strong>SuperSaiyan2</strong><app-levels [level]='super2'></app-levels></div>
-    <div class="col-sm-4 well text-center"><strong>SuperSaiyan3</strong><app-levels [level]='super3'></app-levels></div>
-    <div class="col-sm-4 well text-center"><strong>SuperSaiyan4</strong><app-levels [level]='super4'></app-levels></div>
-  </div>
+<div class=row>
+  <div class="col-sm-4 well text-center"><strong>SuperSaiyan2</strong><app-levels [level]='super2'></app-levels></div>
+  <div class="col-sm-4 well text-center"><strong>SuperSaiyan3</strong><app-levels [level]='super3'></app-levels></div>
+  <div class="col-sm-4 well text-center"><strong>SuperSaiyan4</strong><app-levels [level]='super4'></app-levels></div>
 </div>
